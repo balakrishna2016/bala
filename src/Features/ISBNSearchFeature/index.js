@@ -24,8 +24,8 @@ class ISBNSearchFeature extends Component {
     return (
       <Provider store={store}>
       <div className="container">
-        <ISBNSearch/>
         <SaveBlock/>
+        <ISBNSearch/>
       </div>
     </Provider>
     );

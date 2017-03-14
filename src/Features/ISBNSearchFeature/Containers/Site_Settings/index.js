@@ -8,10 +8,6 @@ class SiteSettings extends Component {
     render() {
         return (
             <div className="site_settings_wrapper">
-                <div className="segment_headder">
-                    SITE SETTINGS
-                </div>
-
                 <div>
                     <FilterLabel />
                 </div>
