@@ -15,19 +15,22 @@ class ISBNSearch extends Component {
         return (
             <div className="pagewrapper">
 
+                <div className="segment_headder" style={{
+                            width : '100% !important',
+                            paddingBottom : 2,
+                            marginBottom : 20
+                        }}>
+                        SITE SETTINGS
+                </div>
+
+
                 <div style={{
                     display: 'flex',
                     flexDirection: 'row'
                 }}>
 
                     <div style={{ flex: 1 }}>
-                        <div className="segment_headder" style={{
-                            width : '100% !important',
-                            paddingBottom : 5,
-                            marginBottom : 2
-                        }}>
-                        SITE SETTINGS
-                        </div>
+                        
                         <SiteIdentifier />
                         <IRT/>
                         <IRTC />

@@ -63,7 +63,7 @@ export class ButtonBlock extends Component{
 
 
 const mapStateToProps = (state) => {
-// console.log(state.ChapterSelection)
+    console.log(state.ChapterSelection)
     return {
         ChapterSelected: state.ChapterSelection,
         SubChapterSelected : state.SubChapterSelection 

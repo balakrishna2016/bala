@@ -1,37 +1,29 @@
 import React, { Component } from 'react';
 
+import CheckBox from './CheckBox'
 
-class ListChild extends Component{
+export class ListChild extends Component{
     render(){
         return(
             <div>
-                <input type="checkbox" id="cbox1" value="first_checkbox"/>
-                <span style={{marginLeft : 10}}>Chapter {this.props.childData.Chapter}</span>
+                <CheckBox parent={true} Chapter = {this.props.parentNumber}/>
+                <span style={{marginLeft : 10}}>Chapter {this.props.parentNumber}</span>
             {
-                this.props.childData.hasChildren ?
-                <div style={{
-                    marginLeft : '25px'
-                }}>
-                {
-                    //console.log(this.props.childData.SubChapters)
-                    this.props.childData.SubChapters.map((item)=>{
-                        console.log(item)
-                        return(
+                this.props.childData.map((item,i)=>{
+                    return(
                             <div style={{
                                 padding : 10
-                            }}>
-
-                            <input type="checkbox" id="cbox1" value="first_checkbox"/>
-                            <span style={{marginLeft : 10}}>Chapter {this.props.childData.Chapter}.{item.Chapter}</span>
+                            }}
+                            key={i}
+                            >
+                            
+                            <CheckBox parent={false} SubChapter={this.props.parentNumber +"."+item}/>
+                            <span style={{marginLeft : 10}}>Chapter {this.props.parentNumber +"."+item}</span>
                             
                             </div>
                         );
-                    })
-                }
-                
-                </div>
-                :
-                null
+
+                })
             }
             </div>
         );
