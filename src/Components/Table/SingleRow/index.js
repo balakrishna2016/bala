@@ -19,7 +19,7 @@ const Style = {
     
 }
 
-import rowCheckBox from './rowCheckBox'
+
 
 class SingleRow extends Component{
     constructor(){

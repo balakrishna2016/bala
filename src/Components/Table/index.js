@@ -4,7 +4,7 @@ import SingleRow from './SingleRow'
 
 var Data = require('./TableData')
 
-import TableHeader from './TableHeader'
+
 
 class Table extends Component {
     render() {
